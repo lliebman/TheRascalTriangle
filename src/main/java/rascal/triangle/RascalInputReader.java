@@ -15,11 +15,9 @@ public class RascalInputReader {
             Scanner inputFile = new Scanner(new File(file));
             int numDataSets = inputFile.nextInt();
             for (int i = 1; i <= numDataSets; i++) {
-                String string = inputFile.nextLine();
-                String[] splitBySpace = string.split("\\s+");
-                DataSet dataSet = new DataSet(Integer.parseInt(splitBySpace[0]),
-                        Integer.parseInt(splitBySpace[1]),
-                        Integer.parseInt(splitBySpace[2]));
+                DataSet dataSet = new DataSet(inputFile.nextInt(),
+                        inputFile.nextInt(),
+                        inputFile.nextInt());
                 dataSets.add(dataSet);
             }
         } catch (Exception e) {

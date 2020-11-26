@@ -9,22 +9,20 @@ public class RascalTriangle {
     }
 
     public int getNum() {
-        int midpoint = dataSet.getIndex() / 2; //double check this is right
+        int midpoint = dataSet.getRow() / 2; //todo double check this is right
+        int row = dataSet.getRow();
+        int col = dataSet.getCol();
+        int index = col;
+        int num = 1;
+        int increment = row - 1;
 
-        int index =
-
-        if (dataSet.getRow() % 2 == 0) { //odd
-
+        if (midpoint > col) {
+            index = row - col;
         }
-        else { //even
-            int numValue = 1;
-            for (int rowIndex = 0; rowIndex != 0; increment-=2) {
-                numValue += increment - 2;
-                rowIndex++;
-            }
-
+        for (int rowIndex = 0; rowIndex != index; rowIndex++) {
+            num += increment;increment -= 2;
         }
-        return -1;
+        return num;
     }
 
 }
