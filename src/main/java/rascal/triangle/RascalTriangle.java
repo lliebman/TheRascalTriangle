@@ -9,7 +9,7 @@ public class RascalTriangle {
     }
 
     public int getNum() {
-        int midpoint = dataSet.getRow() / 2; //todo double check this is right
+        int midpoint = dataSet.getRow() / 2;
         int row = dataSet.getRow();
         int col = dataSet.getCol();
         int index = col;
